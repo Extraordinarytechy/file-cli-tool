@@ -26,5 +26,5 @@ jobs:
       - name: Lint check
         run: flake8 cli tests
 
-      - name: Run tests
-        run: pytest --cov=cli --cov-report=term
+      - name: Run tests with coverage
+        run: PYTHONPATH=. pytest --cov=cli --cov-report=term-missing
