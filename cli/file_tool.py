@@ -2,9 +2,8 @@ import argparse
 
 
 def count_lines(filename):
-    """Return the number of lines in the file."""
     with open(filename, 'r') as f:
-        return len(f.readlines())
+        return sum(1 for line in f if line.strip())
 
 
 def word_frequency(filename):
