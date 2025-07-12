@@ -1,4 +1,4 @@
-name: File CLI Tool CI
+name: CLI Tool CI
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
@@ -26,7 +26,5 @@ jobs:
       - name: Lint check
         run: flake8 cli tests
 
-      - name: Run tests with coverage
-        run: |
-          pytest --cov=cli --cov-report=term-missing
-
+      - name: Run tests
+        run: pytest --cov=cli --cov-report=term
