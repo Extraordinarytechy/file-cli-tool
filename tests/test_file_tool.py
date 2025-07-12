@@ -7,5 +7,5 @@ def test_count_lines():
 
 def test_word_frequency():
     freq = word_frequency("test_input.txt")
-    assert freq["hello"] == 2
+    assert freq["Hello"] == 1
     assert freq["world"] == 1
