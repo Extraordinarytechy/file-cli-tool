@@ -9,4 +9,3 @@ A simple command-line tool to:
 ```bash
 python cli/file_tool.py count test_input.txt
 python cli/file_tool.py freq test_input.txt
-
